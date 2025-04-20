@@ -41,26 +41,26 @@ public class Main{
             input.nextLine(); 
 
             switch (pilihan) {
-                case 1:
-                    for (Mahasiswa m : listMahasiswa) {
-                        m.tampilMahasiswa();
+                case 1: // Tampilkan Daftar Mahasiswa
+                    for (Mahasiswa mahasiswa : listMahasiswa) {
+                        mahasiswa.tampilMahasiswa();
                     }
                     break;
 
-                case 2:
-                    for (MataKuliah mk : listMataKuliah) {
-                        mk.tampilMataKuliah();
+                case 2: // Tampilkan Daftar Mata Kuliah
+                    for (MataKuliah matkul : listMataKuliah) {
+                        matkul.tampilMataKuliah();
                     }
                     break;
 
-                case 3:
-                    for (Penilaian p : listPenilaian) {
-                        p.tampilPenilaian();
+                case 3: // Tampilkan Data Penilaian
+                    for (Penilaian penilaian : listPenilaian) {
+                        penilaian.tampilPenilaian();
                         System.out.println("----------------------");
                     }
                     break;
 
-                case 4:
+                case 4: // Urutkan Mahasiswa berdasarkan Nilai Akhir
                     // Algoaritma Bubble Sort
                     for (int i = 0; i < listPenilaian.length - 1; i++) {
                         for (int j = 0; j < listPenilaian.length - i - 1; j++) {
@@ -72,13 +72,15 @@ public class Main{
                         }
                     }
 
-                    System.out.println("Data setelah diurutkan (Nilai Akhir Desc):");
-                    for (Penilaian p : listPenilaian) {
-                        System.out.println(p.mahasiswa.nama + " - " + p.matkul.nama + " : " + p.hitungNilaiAkhir());
+                    System.out.println("Data setelah diurutkan:");
+                    for (Penilaian penilaian : listPenilaian) {
+                        System.out.println(penilaian.mahasiswa.nama + " | " + penilaian.matkul.nama + " | Nilai Akhir: " + penilaian.hitungNilaiAkhir());
                     }
                     break;
 
-                case 5:
+                case 5: // Cari Mahasiswa berdasarkan NIM
+                    System.out.println();
+                    System.out.println("== PENCARIAN MAHASISWA ==");
                     System.out.print("Masukkan NIM yang dicari: ");
                     String cari = input.nextLine();
                     boolean ketemu = false;
