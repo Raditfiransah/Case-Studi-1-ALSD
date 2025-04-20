@@ -21,7 +21,6 @@ public class Penilaian {
 
     //Tampil Nilai Akhir
     public void tampilPenilaian() {
-        System.out.println("Mata Kuliah: " + matkul.nama);
-        System.out.println("Nilai Akhir: " + hitungNilaiAkhir());
+        System.out.println(mahasiswa.nama + "| " + matkul.nama + "| Nilai Akhir: " + hitungNilaiAkhir());
     }
 }

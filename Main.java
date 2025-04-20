@@ -42,25 +42,28 @@ public class Main{
 
             switch (pilihan) {
                 case 1: // Tampilkan Daftar Mahasiswa
+                    System.out.println("Daftar mahasiswa");
                     for (Mahasiswa mahasiswa : listMahasiswa) {
                         mahasiswa.tampilMahasiswa();
                     }
                     break;
 
                 case 2: // Tampilkan Daftar Mata Kuliah
+                    System.out.println("Daftar Mata Kuliah");
                     for (MataKuliah matkul : listMataKuliah) {
                         matkul.tampilMataKuliah();
                     }
                     break;
 
                 case 3: // Tampilkan Data Penilaian
+                    System.out.println("Data Penilaian Mahasiswa");
                     for (Penilaian penilaian : listPenilaian) {
                         penilaian.tampilPenilaian();
-                        System.out.println("----------------------");
                     }
                     break;
-
+                    
                 case 4: // Urutkan Mahasiswa berdasarkan Nilai Akhir
+                    System.out.println("Data Penilaian Mahasiswa");
                     // Algoaritma Bubble Sort
                     for (int i = 0; i < listPenilaian.length - 1; i++) {
                         for (int j = 0; j < listPenilaian.length - i - 1; j++) {
@@ -79,8 +82,7 @@ public class Main{
                     break;
 
                 case 5: // Cari Mahasiswa berdasarkan NIM
-                    System.out.println();
-                    System.out.println("== PENCARIAN MAHASISWA ==");
+                    System.out.println("Pencarian NIM Mahasiswa");
                     System.out.print("Masukkan NIM yang dicari: ");
                     String cari = input.nextLine();
                     boolean ketemu = false;

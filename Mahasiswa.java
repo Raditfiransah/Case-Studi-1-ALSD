@@ -12,6 +12,6 @@ public class Mahasiswa {
     
     // Tampil Data Mahasiswa
     void tampilMahasiswa(){
-       System.out.println("NIM: " + nim + "| Nama: " + nama + "| Prodi: " + prodi);
+       System.out.println("NIM: " + nim + " | Nama: " + nama + " | Prodi: " + prodi);
     }
 }
