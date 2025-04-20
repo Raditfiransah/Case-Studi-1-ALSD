@@ -103,6 +103,6 @@ public class Main{
             }
         }while(pilihan != 0); // Jika pilihan 0, keluar dari menu
 
+        input.close(); // Tutup scanner
     }
 } 
->>>>>>> Radit
