@@ -64,39 +64,16 @@ public class Main{
                     
                 case 4: // Urutkan Mahasiswa berdasarkan Nilai Akhir
                     System.out.println("Data Penilaian Mahasiswa");
-                    // Algoaritma Bubble Sort
-                    for (int i = 0; i < listPenilaian.length - 1; i++) {
-                        for (int j = 0; j < listPenilaian.length - i - 1; j++) {
-                            if (listPenilaian[j].hitungNilaiAkhir() < listPenilaian[j + 1].hitungNilaiAkhir()) {
-                                Penilaian temp = listPenilaian[j];
-                                listPenilaian[j] = listPenilaian[j + 1];
-                                listPenilaian[j + 1] = temp;
-                            }
-                        }
-                    }
-
-                    System.out.println("Data setelah diurutkan:");
-                    for (Penilaian penilaian : listPenilaian) {
-                        System.out.println(penilaian.mahasiswa.nama + " | " + penilaian.matkul.nama + " | Nilai Akhir: " + penilaian.hitungNilaiAkhir());
-                    }
+                    SearchAndSort.bubbleSort(listPenilaian);
                     break;
-
+                
                 case 5: // Cari Mahasiswa berdasarkan NIM
                     System.out.println("Pencarian NIM Mahasiswa");
                     System.out.print("Masukkan NIM yang dicari: ");
                     String cari = input.nextLine();
-                    boolean ketemu = false;
-                    for (Mahasiswa m : listMahasiswa) {
-                        if (m.nim.equalsIgnoreCase(cari)) {
-                            m.tampilMahasiswa();
-                            ketemu = true;
-                            break;
-                        }
-                    }
-                    if (!ketemu) {
-                        System.out.println("Mahasiswa Tidak Ditemukan!");
-                    }
+                    SearchAndSort.cariNim(listMahasiswa, cari);
                     break;
+                
 
                 case 0:
                     System.out.println("Keluar dari program. Terima kasih!");
