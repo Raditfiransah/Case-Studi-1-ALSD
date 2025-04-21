@@ -19,7 +19,6 @@ Program dibuat dalam rangka memenuhi tugas **Case Method Mata Kuliah Algortima d
 
 ## 💡 Fitur Utama
 
-- ✅ Input data mahasiswa
 - ✅ Tampilkan seluruh data mahasiswa
 - 🔍 **Searching** data mahasiswa berdasarkan NIM
 - 📊 **Sorting** data berdasarkan NIM
